@@ -1,50 +1,145 @@
 .main-hero{
-    background-size: cover;
-    background-position: center;
+    padding-top: 118px;
+    padding-bottom: 118px;
+    background-color: $bg-footer-color;
+    max-width: 480px;
+    height: 400px;
+    margin-right: auto;
+    margin-left: auto;
     background-image: linear-gradient(
         to right,
         rgba(47, 48, 58, 0.4),
         rgba(47, 48, 58, 0.4)
+      ),
+      url("../../images/hero-img/hero-480.jpg");
+    background-size: cover;
+    background-position: center;
+    @media screen and (min-width: $desktop) {
+        padding-top: 200px;
+        padding-bottom: 200px;
+      }
+}   
+@media screen and (min-device-pixel-ratio: 2) and (min-width: 320px),
+  screen and (min-resolution: 192dpi) and (min-width: 320px),
+  screen and (min-resolution: 2dppx) and (min-width: 320px) {
+    .main-hero {
+        background-image: linear-gradient(
+            to right,
+            rgba(47, 48, 58, 0.4),
+            rgba(47, 48, 58, 0.4)
+          ),
+          url("../../images/hero-img/hero-480@2x.jpg");
+      }
+  }
+
+  @media screen and (min-width: 768px) {
+    .main-hero {
+      max-width: 768px;
+      background-image: linear-gradient(
+          to right,
+          rgba(47, 48, 58, 0.4),
+          rgba(47, 48, 58, 0.4)
         ),
-    url(../../images/hero-img/hero-img.jpg);
-    max-width: 1600px;
-    height: 600px;
-    margin-left: auto;
+        url("../../images/hero-img/hero-768.jpg");
+    }
+  }
+
+  @media screen and (min-device-pixel-ratio: 2) and (min-width: 768px),
+  screen and (min-resolution: 192dpi) and (min-width: 768px),
+  screen and (min-resolution: 2dppx) and (min-width: 768px) {
+    .main-hero {
+    background-image: linear-gradient(
+        to right,
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)
+      ),
+      url("../../images/hero-img/hero-768@2x.jpg");
+  }
+}
+@media screen and (min-width: 1200px) {
+    .main-hero {
+      max-width: 1600px;
+      height: 600px;
+      background-image: linear-gradient(
+          to right,
+          rgba(47, 48, 58, 0.4),
+          rgba(47, 48, 58, 0.4)
+        ),
+        url("../../images/hero-img/hero-1600.jpg");
+    }
+  }
+  @media screen and (min-device-pixel-ratio: 2) and (min-width: 1200px),
+  screen and (min-resolution: 192dpi) and (min-width: 1200px),
+  screen and (min-resolution: 2dppx) and (min-width: 1200px) {
+    .main-hero {
+    background-image: linear-gradient(
+        to right,
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)
+      ),
+      url("../../images/hero-img/hero-1600@2x.jpg");
+  }
+}
+.hero-section {
+    max-width: 360px;
     margin-right: auto;
-    background-color: $bg-footer-color;
-    text-align: center;
-}
-.container.hero-section{
-    padding: 200px 252px;
-    text-align: center;
-}
-.container-hero{
-    width: 696px;
     margin-left: auto;
-    margin-right: auto;
-}
-.hero-title{
-    max-width: 700px;
-    margin-bottom: 30px;
-    color: $white-text-Color;
+  
+    @media screen and (min-width: $desktop) {
+      max-width: 696px;
+    }
+  }
+
+ .hero-title {
     font-weight: 900;
-    font-size: 44px;
-    line-height: 1.36;
-    
+    font-size: 26px;
+    line-height: 1.615;
+    text-align: center;
     letter-spacing: 0.06em;
     text-transform: uppercase;
-}
-.hero-button{
-    border: $akcent-color;
-    border-radius: 4px;
-    padding: 10px 32px;
-    min-width: 200px;
-    text-align: center;
     color: $white-text-Color;
+    margin-top: 0%;
+    margin-bottom: 30px;
+
+    @media screen and (min-width: $desktop) {
+        font-size: 44px;
+        line-height: 1.363;
+      }
+ }
+
+ .hero-button{
     background-color: $akcent-color;
+    color: $white-text-Color;
     font-weight: 700;
     font-size: 16px;
-    line-height: 1.8;
+    line-height: 1.875;
+    cursor: pointer;
+    display: flex;
+    padding: 10px 32px;
+    text-align: center;
     letter-spacing: 0.06em;
-    cursor: pointer
+    min-width: 200px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    border: 1px solid $akcent-color;
+    margin-left: auto;
+    margin-right: auto;
+    
+}
+.container-hero{
+    @media screen and (max-width: 479px) {
+        max-width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+      }
+      @media screen and (max-width: 1199px) {
+        width: 360px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+      @media screen and (min-width: 1200px) {
+        width: 696px;
+        margin-left: auto;
+        margin-right: auto;
+      }
 }

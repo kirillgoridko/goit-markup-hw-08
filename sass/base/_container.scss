@@ -2,6 +2,12 @@
     width: 100%;
     padding: 0 15px;
 
+    .header &{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
 }
 @media screen and (min-width: $mobile) {
     .container{
@@ -12,11 +18,18 @@
 @media screen and (min-width: $tablet) {
     .container{
         width: 768px;
+        .header &{
+            display: flex;
+            align-items: center;
+        }
     }
+    
 }
 @media screen and (min-width: $desktop) {
     .container{
         width: 1200px;
+        margin-right: auto;
+        margin-left: auto;
     }
 }
 

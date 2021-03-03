@@ -1,25 +1,65 @@
 .features{
-    padding-top: 94px;
-    padding-bottom: 94px;
+    @media screen and (max-width: $desktop) {
+        padding-top: 60px;
+        padding-bottom: 60px;
+      }
+      @media screen and (min-width: $desktop) {
+        padding-top: 94px;
+        padding-bottom: 47px;
+      }
 }
-
 .features-list{
-    display: flex;
-}
-/*==SVG Наши качества==*/
-.icon-division{
-    @extend %flex-centered;
-    border-radius: 4px;
-    margin-bottom: 30px;
-    background-color: #F5F4FA;
-    justify-content: center;
-
-    width: 270px;
-    height: 120px;
-}
-.features-list .feature-item+.feature-item{
-    margin-left: 30px;
+    @media screen and (max-width: 767px) {
+        display: flex;
+        flex-direction: column;
+      }
+    @media screen and (min-width: $tablet) {
+        display: flex;
+        flex-wrap: wrap;
+        margin: -15px;
+      }
+    @media screen and (min-width: $desktop) {
+        display: flex;
+        flex-wrap: nowrap;
+      }
 }
 .feature-item{
-    min-width: 270px;
+    @media screen and (max-width: 767px) {
+        width: 100%;
+      }
+    @media screen and (min-width: $tablet) {
+        flex-basis: calc((100% - 2 * 30px) / 2);
+        margin: 15px;
+      }
 }
+.feature-item:not(:last-child){
+    @media screen and (max-width: 767px) {
+        margin-bottom: 30px;
+      }
+}
+.section-title{
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  text-transform: uppercase;
+  color: $title-color;
+  display: inline-block;
+  margin-bottom: 10px;
+  @media screen and (max-width: 767px) {
+    display: block;
+    text-align: center;
+  }
+}
+.icon-division{
+    @extend %flex-centered;
+    height: 120px;
+    justify-content: center;
+    background-color: $bg-team-color;
+    border-radius: 4px;
+    margin-bottom: 30px;
+    @media screen and (max-width: 767px) {
+        width: 100%;
+        height: 120px;
+      }
+}
+

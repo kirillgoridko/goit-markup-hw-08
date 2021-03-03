@@ -12,7 +12,7 @@
 </head>
     <body>
          <!--HEADER-->
-        <header class="header-index">
+        <header class="header index-no-line">
            
             <div class="container main-nav">
                 <nav class="main-nav">
@@ -23,9 +23,13 @@
                         <li class="item"><a href="./portfolio.html" class="link ">Портфолио</a></li>
                         <li class="item"><a href="#" class="link">Контакты</a></li>
                         </ul>
-                </nav>  
+                </nav> 
+                <button type="button" class="button-dropdown">
+                    <svg class="burger-icon" width="40" height="40">
+                        <use href="./images/team-svg/sprite.svg#icon-menu"></use>
+                    </svg>
+                </button> 
                     <ul class="site-contact">
-                        
                         <li class="item">
                             <a href="mailto:info@devstudio.com" class="nav-info mail">
                             <svg class="icon-envelope" width="16" height="12">
@@ -44,7 +48,7 @@
 
          <main> 
             <!--HERO-->
-                <!-- <section class="main-hero">
+                <section class="main-hero">
                     <div class="container hero-section">
                         <div class="container-hero">
                             <h1 class="hero-title">
@@ -55,9 +59,9 @@
                             </button>
                         </div>
                     </div>
-                </section> -->
-            <!--FEATURES-->
-            <!-- <section class="features">
+                </section> 
+            <!--FEATURES -->
+            <section class="features"> 
                 <div class="container">
                 <ul class="features-list">
                     <li class="feature-item">
@@ -102,15 +106,15 @@
                     </li>
                 </ul>
                 </div>
-            </section> -->
+            </section> 
             <!--WE-DOING-->
-            <!-- <section class="we-doing">
+            <section class="we-doing">
                 <div class="container">
                 <h2 class="section-subject">Чем мы занимаемся</h2>
                 <ul class="we-doing-list">
                     <li class="item">
                         <div class="description">
-                            <img src="./images/we-doing/work-1.jpg" alt="Написание кода">
+                            <img src="./images/we-doing/keyboard.jpg" alt="Написание кода">
                         
                             <div class="text-description">
                                 <p class="images-text">Десктопные приложения</p>
@@ -119,7 +123,7 @@
                     </li>
                     <li class="item">
                         <div class="description">
-                            <img src="./images/we-doing/work-2.jpg" alt="Адаптация к смартфону">
+                            <img src="./images/we-doing/tele.jpg" alt="Адаптация к смартфону">
                             <div class="text-description">
                                 <p class="images-text">Мобильные приложения</p>
                             </div> 
@@ -127,7 +131,7 @@
                     </li>
                     <li class="item">
                         <div class="description">
-                            <img src="./images/we-doing/work-3.jpg" alt="Калибровка красок">
+                            <img src="./images/we-doing/display.jpg" alt="Калибровка красок">
                             <div class="text-description">
                                 <p class="images-text">Дизайнерские решения</p>
                             </div> 
@@ -135,14 +139,62 @@
                     </li>
                 </ul>
                 </div>
-            </section> -->
+            </section>
             <!--TEAM-->
-            <!-- <section class="team">
+           <section class="team">
                 <div class="container">
                 <h2 class="section-subject">Наша команда</h2>
                 <ul class="team-list">
                     <li class="item">
-                        <img src="./images/piople/team-1.jpg" class="team-pfoto" width="270" height="260" alt="Игорь Демьяненко">
+                        <picture>
+                            <source
+                                srcset="./images/piople/desktop/desktop-igor.webp 1x,
+                                ./images/piople/desktop/desktop-igor@2x.webp 2x"
+                                media="(min-width: 1200px)"
+                                type="image/webp"
+                            />
+                            <source
+                                srcset="./images/piople/desktop/desktop-igor.jpg  1x,
+                                ./images/piople/desktop/desktop-igor@2x.jpg 2x
+                                "
+                                media="(min-width: 1200px)"
+                            />
+                            <source
+                                srcset="
+                                ./images/piople/tablet/tablet-igor.webp   1x,
+                                ./images/piople/tablet/tablet-igor@2x.webp  2x
+                                "
+                                media="(min-width: 768px)"
+                                type="image/webp"
+                            />
+                            <source
+                                srcset="
+                                ./images/piople/tablet/tablet-igor.jpg    1x,
+                                ./images/piople/tablet/tablet-igor@2x.jpg 2x
+                                "
+                                media="(min-width: 768px)"
+                            />
+                            <source
+                                srcset="
+                                ./images/piople/mobile/mobile-igor.webp    1x,
+                                ./images/piople/mobile/mobile-igor@2x.webp 2x
+                                "
+                                media="(min-width: 320px)"
+                                type="image/webp"
+                            />
+                            <source
+                                srcset="
+                                ./images/piople/mobile/mobile-igor.jpg    1x,
+                                ./images/piople/mobile/mobile-igor@2x.jpg 2x
+                                "
+                                media="(min-width: 320px)"
+                            />
+                            <img
+                            class="team-pfoto"
+                            src="./images/piople/desktop/desktop-igor.jpg"
+                            alt="Игорь Демьяненко"
+                          />
+                        </picture>
                         <div class="team-name">
                         <h3 class="section-name">Игорь Демьяненко</h3>
                         <p class="lead">Product Designer</p>
@@ -179,7 +231,55 @@
                         </div>
                     </li>
                     <li class="item">
-                        <img src="./images/piople/team-2.jpg" class="team-pfoto" width="270" height="260" alt="Ольга Репина">
+                        <picture>
+                            <source
+                                srcset="./images/piople/desktop/desktop-olga.webp 1x,
+                                ./images/piople/desktop/desktop-olga@2x.webp 2x"
+                                media="(min-width: 1200px)"
+                                type="image/webp"
+                            />
+                            <source
+                                srcset="./images/piople/desktop/desktop-olga.jpg  1x,
+                                ./images/piople/desktop/desktop-olga@2x.jpg 2x
+                                "
+                                media="(min-width: 1200px)"
+                            />
+                            <source
+                                srcset="
+                                ./images/piople/tablet/tablet-olga.webp   1x,
+                                ./images/piople/tablet/tablet-olga@2x.webp  2x
+                                "
+                                media="(min-width: 768px)"
+                                type="image/webp"
+                            />
+                            <source
+                                srcset="
+                                ./images/piople/tablet/tablet-olga.jpg    1x,
+                                ./images/piople/tablet/tablet-olga@2x.jpg 2x
+                                "
+                                media="(min-width: 768px)"
+                            />
+                            <source
+                                srcset="
+                                ./images/piople/mobile/mobile-olga.webp    1x,
+                                ./images/piople/mobile/mobile-olga@2x.webp 2x
+                                "
+                                media="(min-width: 320px)"
+                                type="image/webp"
+                            />
+                            <source
+                                srcset="
+                                ./images/piople/mobile/mobile-olga.jpg    1x,
+                                ./images/piople/mobile/mobile-olga@2x.jpg 2x
+                                "
+                                media="(min-width: 320px)"
+                            />
+                            <img
+                            class="team-pfoto"
+                            src="./images/piople/desktop/desktop-olga.jpg"
+                            alt="Ольга Репина"
+                          />
+                        </picture>
                         <div class="team-name">
                         <h3 class="section-name">Ольга Репина</h3>
                         <p class="lead">Frontend Developer</p>
@@ -216,7 +316,55 @@
                         </div>
                     </li>
                     <li class="item">
-                        <img src="./images/piople/team-3.jpg" class="team-pfoto" width="270" height="260" alt="Николай Тарасов">
+                        <picture>
+                            <source
+                                srcset="./images/piople/desktop/desktop-nikolai.webp 1x,
+                                ./images/piople/desktop/desktop-nikolai@2x.webp 2x"
+                                media="(min-width: 1200px)"
+                                type="image/webp"
+                            />
+                            <source
+                                srcset="./images/piople/desktop/desktop-nikolai.jpg  1x,
+                                ./images/piople/desktop/desktop-nikolai@2x.jpg 2x
+                                "
+                                media="(min-width: 1200px)"
+                            />
+                            <source
+                                srcset="
+                                ./images/piople/tablet/tablet-nikolai.webp   1x,
+                                ./images/piople/tablet/tablet-nikolai@2x.webp  2x
+                                "
+                                media="(min-width: 768px)"
+                                type="image/webp"
+                            />
+                            <source
+                                srcset="
+                                ./images/piople/tablet/tablet-nikolai.jpg    1x,
+                                ./images/piople/tablet/tablet-nikolai@2x.jpg 2x
+                                "
+                                media="(min-width: 768px)"
+                            />
+                            <source
+                                srcset="
+                                ./images/piople/mobile/mobile-nikolai.webp    1x,
+                                ./images/piople/mobile/mobile-nikolai@2x.webp 2x
+                                "
+                                media="(min-width: 320px)"
+                                type="image/webp"
+                            />
+                            <source
+                                srcset="
+                                ./images/piople/mobile/mobile-nikolai.jpg    1x,
+                                ./images/piople/mobile/mobile-nikolai@2x.jpg 2x
+                                "
+                                media="(min-width: 320px)"
+                            />
+                            <img
+                            class="team-pfoto"
+                            src="./images/piople/desktop/desktop-nikolai.jpg"
+                            alt="Николай Тарасов"
+                          />
+                        </picture>
                         <div class="team-name">
                         <h3 class="section-name">Николай Тарасов</h3>
                         <p class="lead">Marketing</p>
@@ -253,7 +401,55 @@
                         </div>
                     </li>
                     <li class="item">
-                        <img src="./images/piople/team-4.jpg" class="team-pfoto" width="270" height="260" alt="Михаил Ермаков">
+                        <picture>
+                            <source
+                                srcset="./images/piople/desktop/desktop-mikhail.webp 1x,
+                                ./images/piople/desktop/desktop-mikhail@2x.webp 2x"
+                                media="(min-width: 1200px)"
+                                type="image/webp"
+                            />
+                            <source
+                                srcset="./images/piople/desktop/desktop-mikhail.jpg  1x,
+                                ./images/piople/desktop/desktop-mikhail@2x.jpg 2x
+                                "
+                                media="(min-width: 1200px)"
+                            />
+                            <source
+                                srcset="
+                                ./images/piople/tablet/tablet-mikhail.webp   1x,
+                                ./images/piople/tablet/tablet-mikhail@2x.webp  2x
+                                "
+                                media="(min-width: 768px)"
+                                type="image/webp"
+                            />
+                            <source
+                                srcset="
+                                ./images/piople/tablet/tablet-mikhail.jpg    1x,
+                                ./images/piople/tablet/tablet-mikhail@2x.jpg 2x
+                                "
+                                media="(min-width: 768px)"
+                            />
+                            <source
+                                srcset="
+                                ./images/piople/mobile/mobile-mikhail.webp   1x,
+                                ./images/piople/mobile/mobile-mikhail@2x.webp 2x
+                                "
+                                media="(min-width: 320px)"
+                                type="image/webp"
+                            />
+                            <source
+                                srcset="
+                                ./images/piople/mobile/mobile-mikhail.jpg    1x,
+                                ./images/piople/mobile/mobile-mikhail@2x.jpg 2x
+                                "
+                                media="(min-width: 320px)"
+                            />
+                            <img
+                            class="team-pfoto"
+                            src="./images/piople/desktop/desktop-mikhail.jpg"
+                            alt="Михаил Ермаков"
+                          />
+                        </picture>
                         <div class="team-name">
                         <h3 class="section-name">Михаил Ермаков</h3>
                         <p class="lead">UI Designer</p>
@@ -291,7 +487,7 @@
                     </li>
                 </ul>
                 </div>
-            </section> -->
+            </section>
             <!--CLIENTS-->
             <!-- <section class="clients">
                 <div class="container">
