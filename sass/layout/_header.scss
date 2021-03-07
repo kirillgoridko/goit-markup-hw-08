@@ -146,7 +146,7 @@
     flex-direction: column;
     justify-content: space-between;
     height: 100%;
-    overflow-y: scroll;
+    overflow-y: auto;
 }
 
 
@@ -154,7 +154,6 @@
     .logo{
         padding-top: 16px;
         padding-bottom: 16px;
-        margin-left: 15px;
         margin-right: 0;
     }
     .site-nav{
